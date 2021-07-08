@@ -14,7 +14,7 @@ export default class GameOverDialog {
     this._updatePosition();
     this.domNode.innerHTML = `
     <div class="dialog-content">
-      <p class="dialog-message">You died, captain!</p>
+      <p class="dialog-message">You died, captain!(killed By ` + killedBy +`)</p>
       <p class="dialog-message">Your score was: ` + globalState.score + `!</p>
       <button id="submit" class="action-button" type="button" autofocus>Take revenge!</button>
     </div>

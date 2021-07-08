@@ -8,35 +8,39 @@ Massive multiplayer galactic game written in Golang. It has been inspired by the
 [http://superstellar.u2i.is](http://superstellar.u2i.is)
 
 ## Rules
-Destroy moving objects and don’t get killed by other players and asteroids. You’ve got two resources – health points and energy points. You lose your health with every hit you get and every contact with the asteroid. Energy points are consumed when shooting and using a boost drive. The more objects you kill, the bigger your health bar grows. Good luck
+Destroy moving objects and don’t get killed by other players and asteroids. You’ve got two resources – health points and
+energy points. You lose your health with every hit you get and every contact with the asteroid. Energy points are consumed
+when shooting and using a boost drive. The more objects you kill, the bigger your health bar grows. Good luck
 
 ## Story behind the game
 [https://medium.com/u2i-blogs/we-made-a-multiplayer-browser-game-in-go-for-fun-242a5990ce29/](https://medium.com/u2i-blogs/we-made-a-multiplayer-browser-game-in-go-for-fun-242a5990ce29/)
 
 ## Installation & running
 1. Clone this repository to your `$GOPATH/src` directory
-1. `cd` to that directory
-2. Run `go get`
-3. Run `go build && go install`
-4. Run `$GOPATH/bin/superstellar` to run a server instance
-5. Open new console and go to the game source directory.
-6. `cd webroot`
-7. `npm install`
-8. `npm run dev`
-9. Go to [http://localhost:8090](http://localhost:8090)
+2. `cd` to that directory
+3. Run `go get`
+4. Run `go build`
+5. Run `./superstellar` to run a server instance
+6. Open new console and go to the game source directory.
+7. `cd webroot`
+8. `npm install` `yarn add node-sass`
+9. `npm run dev`
+10. Go to [http://localhost:7770](http://localhost:7770)
 
 ## Running stress test util
-You can run a stress test util that spawns any number of clients which connect to the server and send ramdomly correct user input messages.
+You can run a stress test util that spawns any number of clients which connect to the server and send ramdomly correct user
+input messages.
 
 1. `cd superstellar_utils`
 1. `go build && go install`
 1. Run `$GOPATH/bin/superstellar_utils 127.0.0.1 100 50ms` for spawning 100 clients, with 50 ms interval.
 
-## Live profiling 
-It's possible to dump various information from the running server, e.g. stacktraces of all goroutines which might be useful in case of a deadlock. 
+## Live profiling
+It's possible to dump various information from the running server, e.g. stacktraces of all goroutines which might be useful
+in case of a deadlock.
 
 1. Run server
-1. Go to [http://localhost:8080/debug/pprof/](http://localhost:8080/debug/pprof/)
+1. Go to [http://localhost:7777/debug/pprof/](http://localhost:7777/debug/pprof/)
 
 ## Using JS `__DEBUG__` flag
 
@@ -52,4 +56,4 @@ if (__DEBUG__) {
 
 ## Compiling protobufs
 
-Run `./generateProto.sh` 
+Run `./generateProto.sh`

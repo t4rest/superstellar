@@ -6,12 +6,10 @@ import (
 	"log"
 	"math/rand"
 	"net/http"
-	"time"
-)
-
-import (
 	_ "net/http/pprof"
 	"os"
+	"time"
+
 	"superstellar/backend/ai"
 	"superstellar/backend/communication"
 	"superstellar/backend/events"
@@ -94,5 +92,5 @@ func main() {
 	go eventDispatcher.RunEventLoop()
 	go physicsTicker.Run()
 
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":7777", nil))
 }
